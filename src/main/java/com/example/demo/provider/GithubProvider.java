@@ -24,10 +24,13 @@ public class GithubProvider {
         try (Response response = client.newCall(request).execute()) {
             String str= response.body().string();
             String token=str.split("&")[0].split("=")[1];
+            System.out.println(str);
+            System.out.println(token);
             return token;
-//            System.out.println(str);
-        } catch (IOException e) {
-            e.printStackTrace();
+           // System.out.println(str);
+        } catch (Exception e) {
+            System.out.println("有bug产生！");
+            //e.printStackTrace();
         }
        return null;
     }

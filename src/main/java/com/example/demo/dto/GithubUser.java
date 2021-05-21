@@ -1,9 +1,9 @@
 package com.example.demo.dto;
 
 public class GithubUser {
-    private String name;
     private Long id;
     private String bio;
+    private String name;
 
     public String getName() {
         return name;
@@ -12,6 +12,7 @@ public class GithubUser {
     public void setName(String name) {
         this.name = name;
     }
+
 
     public Long getId() {
         return id;
